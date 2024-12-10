@@ -17,7 +17,7 @@ void parse_and_execute(char *input) {
     args[i] = NULL;
 
     if (args[0] == NULL) {
-        return;
+        return; // 명령어가 없을 경우
     }
 
     if (strcmp(args[0], "cd") == 0) {
@@ -29,7 +29,7 @@ void parse_and_execute(char *input) {
     } else if (strcmp(args[0], "cat") == 0) {
         execute_cat(args);
     } else if (strcmp(args[0], "exec") == 0) {
-        execute_exec(args + 1); 
+        execute_exec(args + 1); // exec 명령 처리
     } else if (strcmp(args[0], "exit") == 0) {
         printf("Exiting myshell.\n");
         exit(0);
