@@ -28,6 +28,8 @@ void parse_and_execute(char *input) {
         execute_ls(args);
     } else if (strcmp(args[0], "cat") == 0) {
         execute_cat(args);
+    } else if (strcmp(args[0], "exec") == 0) {
+        execute_exec(args + 1); 
     } else if (strcmp(args[0], "exit") == 0) {
         printf("Exiting myshell.\n");
         exit(0);
